@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // para ele gerar um construtor que recebe todos os campos
 public class Endereco {
 
-    private String longradouro;
+    private String logradouro;
     private String bairro;
     private String cep;
     private String numero;
@@ -21,7 +21,7 @@ public class Endereco {
 
 
     public Endereco(DadosEndereco dados) {
-
+        this.logradouro = dados.logradouro();
         this.bairro = dados.bairro();
         this.cep = dados.cep();
         this.numero = dados.numero();

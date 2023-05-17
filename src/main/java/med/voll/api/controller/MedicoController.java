@@ -37,5 +37,14 @@ public class MedicoController {
         medico.atualizarInformacoes(dados);
 
     }
+    @DeleteMapping("/{id}") // o Spring sabe que o /id e um parametro da anotacao deletemapping
+    @Transactional
+    public void excluir(@PathVariable Long id){
+        // é uma varivel do @PathVariable do caminho url
+        // mostra que parametro Long id e equivalente do /{id}
+
+        repository.deleteById(id);
+
+    }
 
 }
